@@ -3,32 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Flexbox Image Layout</title>
+    <title>Wedding Countdown</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="image-container">
-        <img src="WeddingImages/1.png" alt="Image 1">
-        <img src="WeddingImages/2.png" alt="Image 2">
-        <img src="WeddingImages/3.png" alt="Image 3">
-        <img src="WeddingImages/4.png" alt="Image 4">
-        <img src="WeddingImages/5.png" alt="Image 5">
-        <img src="WeddingImages/6.png" alt="Image 6">
-        <img src="WeddingImages/7.png" alt="Image 7">
-        <img src="WeddingImages/8.png" alt="Image 8">
-        <img src="WeddingImages/9.png" alt="Image 9">
-        <img src="WeddingImages/10.png" alt="Image 10">
-        <img src="WeddingImages/Timeline.png" alt="Image 11">
-        <img src="WeddingImages/11.png" alt="Image 12">
-        
-        <div class="image-rsvp">
-            <img src="WeddingImages/12.png" alt="Image 13">
-            <div class="rsvp-button">
-              <p>Are you coming to the wedding?</p>
-              <button onclick="alert('Yes!')">Yes</button>
-              <button onclick="alert('No!')">No</button>
+    <div class="container">
+        <!-- Images 1 to 3 -->
+        <img src="WeddingImages/1.png" alt="Image 1" class="image">
+        <img src="WeddingImages/2.png" alt="Image 2" class="image">
+        <img src="WeddingImages/3.png" alt="Image 3" class="image">
+
+        <!-- Image 4 with countdown timer -->
+        <div class="image countdown-container">
+            <img src="WeddingImages/4.png" alt="Image 4" class="image">
+            <div class="countdown">
+                <div id="days" class="countdown-item"></div>
+                <div id="hours" class="countdown-item"></div>
+                <div id="minutes" class="countdown-item"></div>
             </div>
-          </div>
+        </div>
+
+        <!-- Images 5 to 12 -->
+        <img src="WeddingImages/5.png" alt="Image 5" class="image">
+        <img src="WeddingImages/6.png" alt="Image 6" class="image">
+        <img src="WeddingImages/7.png" alt="Image 7" class="image">
+        <img src="WeddingImages/8.png" alt="Image 8" class="image">
+        <img src="WeddingImages/9.png" alt="Image 9" class="image">
+        <img src="WeddingImages/10.png" alt="Image 10" class="image">
+        <img src="WeddingImages/Timeline.png" alt="Image 11" class="image">
+        <img src="WeddingImages/11.png" alt="Image 12" class="image">
+
+        <!-- Image 13 with RSVP button -->
+        <div class="image rsvp-container">
+            <img src="WeddingImages/12.png" alt="Image 13" class="image">
+            <div class="rsvp">
+                <p>Are you coming to the wedding?</p>
+                <button class="rsvp-btn" onclick="alert('Yes!')">Yes</button>
+                <button class="rsvp-btn" onclick="alert('No')">No</button>
+            </div>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
