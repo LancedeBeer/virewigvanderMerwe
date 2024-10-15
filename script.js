@@ -1,42 +1,48 @@
 // Countdown Timer
 const countdownDate = new Date("April 26, 2025 00:00:00").getTime();
-const countdownTimer = setInterval(function() {
+const daysElem = document.getElementById("days");
+const hoursElem = document.getElementById("hours");
+const minutesElem = document.getElementById("minutes");
+
+function updateCountdown() {
     const now = new Date().getTime();
-    const distance = countdownDate - now;
+    const timeLeft = countdownDate - now;
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
+    daysElem.textContent = days;
+    hoursElem.textContent = hours;
+    minutesElem.textContent = minutes;
+}
 
-    if (distance < 0) {
-        clearInterval(countdownTimer);
-        document.getElementById("days").innerText = "00";
-        document.getElementById("hours").innerText = "00";
-        document.getElementById("minutes").innerText = "00";
-    }
-}, 1000);
+setInterval(updateCountdown, 1000);
 
-// RSVP Button Functionality
-document.getElementById("rsvp-no").addEventListener("click", function() {
-    document.getElementById("image-1").scrollIntoView({ behavior: "smooth" });
+// Yes and No Button functionality
+const yesButton = document.getElementById('yesButton');
+const noButton = document.getElementById('noButton');
+const yesForm = document.getElementById('yesForm');
+const noForm = document.getElementById('noForm');
+
+yesButton.addEventListener('click', () => {
+    yesForm.style.display = 'block';
 });
 
-document.getElementById("rsvp-yes").addEventListener("click", function() {
-    document.getElementById("rsvp-form").style.display = "flex";
+noButton.addEventListener('click', () => {
+    noForm.style.display = 'block';
 });
 
-// Modal Close
-const modal = document.getElementById("rsvp-form");
-const span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-    modal.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// No form submit takes user to image 1
+document.getElementById('noResponse').addEventListener('submit', function (e) {
+    e.preventDefault();
+    noForm.style.display = 'none';
+    window.scrollTo(0, 0); // Scrolls to the top (Image 1)
+});
+
+// Yes form submission
+document.getElementById('yesResponse').addEventListener('submit', function (e) {
+    e.preventDefault();
+    yesForm.style.display = 'none';
+    alert('Thank you for your response!');
+});
