@@ -37,7 +37,7 @@ img {
 .link-images {
     display: flex;
     justify-content: space-around;
-    margin-top: -50px; /* Adjust positioning */
+    margin-top: -150px; /* Adjust positioning */
 }
 
 .link-images a img {
@@ -47,7 +47,7 @@ img {
 /* RSVP Button Styling */
 .rsvp-container {
     text-align: center;
-    margin-top: -50px; /* Adjust positioning */
+    margin-top: -200px; /* Adjust positioning */
 }
 
 .rsvp-container button {
