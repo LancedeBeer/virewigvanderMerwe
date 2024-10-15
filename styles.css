@@ -2,81 +2,102 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body, html {
+  }
+  
+  body, html {
     height: 100%;
-    width: 100%;
     font-family: Arial, sans-serif;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 100%;
-}
-
-.image {
+  }
+  
+  .image {
     width: 100%;
     height: auto;
-}
-
-.timer-container, .rsvp-container {
+  }
+  
+  .image-with-timer {
     position: relative;
-}
-
-.countdown {
+  }
+  
+  .countdown {
     position: absolute;
-    top: 50%;
+    top: 20px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
-}
-
-.time-section {
-    display: inline-block;
-    text-align: center;
+  }
+  
+  .time-box {
     border: 1px solid black;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.8);
-}
-
-.rsvp {
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .image-with-rsvp {
+    position: relative;
+  }
+  
+  .rsvp {
     position: absolute;
-    top: 50%;
+    top: 20px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
-    font-size: 20px;
-}
-
-.rsvp button {
-    background: none;
-    border: 1px solid black;
-    padding: 10px 20px;
+  }
+  
+  .rsvp button {
+    padding: 10px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 18px;
-}
-
-.rsvp button:hover {
-    background: #ccc;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
+  }
+  
+  #rsvp-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 1000;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container input {
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .btn {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .cancel {
+    background-color: red;
+    color: white;
+  }
+  
+  @media only screen and (max-width: 768px) {
     .countdown {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     .rsvp {
-        flex-direction: column;
+      flex-direction: column;
     }
-}
+  }
+  
