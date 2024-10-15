@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Countdown</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="container">
-    <!-- Images 1-3 -->
-    <img src="WeddingImages/1.png" alt="Image 1" class="image">
-    <img src="WeddingImages/2.png" alt="Image 2" class="image">
-    <img src="WeddingImages/3.png" alt="Image 3" class="image">
-
-    <!-- Image 4 with Countdown Timer -->
-    <div class="image image-with-timer">
-      <img src="WeddingImages/4.png" alt="Image 4" class="image">
-      <div class="countdown" id="countdown">
-        <div class="time-box">
-          <span id="days"></span><br> Days
+    <div class="flex-container">
+        <!-- Images 1 to 13 -->
+        <div class="image-container" id="image-1"><img src="WeddingImages/1.png" alt="Image 1"></div>
+        <div class="image-container" id="image-2"><img src="WeddingImages/2.png" alt="Image 2"></div>
+        <div class="image-container" id="image-3"><img src="WeddingImages/3.png" alt="Image 3"></div>
+        <div class="image-container" id="image-4">
+            <img src="WeddingImages/4.png" alt="Image 4">
+            <!-- Countdown Timer -->
+            <div class="countdown-container">
+                <div class="countdown-segment" id="days">00</div>
+                <div class="countdown-segment" id="hours">00</div>
+                <div class="countdown-segment" id="minutes">00</div>
+            </div>
         </div>
-        <div class="time-box">
-          <span id="hours"></span><br> Hours
+        <div class="image-container" id="image-5"><img src="WeddingImages/5.png" alt="Image 5"></div>
+        <div class="image-container" id="image-6"><img src="WeddingImages/6.png" alt="Image 6"></div>
+        <div class="image-container" id="image-7"><img src="WeddingImages/7.png" alt="Image 7"></div>
+        <div class="image-container" id="image-8"><img src="WeddingImages/8.png" alt="Image 8"></div>
+        <div class="image-container" id="image-9"><img src="WeddingImages/9.png" alt="Image 9"></div>
+        <div class="image-container" id="image-10"><img src="WeddingImages/10.png" alt="Image 10"></div>
+        <div class="image-container" id="image-11"><img src="WeddingImages/Timeline.png" alt="Image 11"></div>
+        <div class="image-container" id="image-12">
+            <img src="WeddingImages/11.png" alt="Image 12">
+            <!-- 3 Images with Links -->
+            <div class="link-images">
+                <a href="https://www.silverfigguesthouse.co.za/"><img src="WeddingImages/Logo/SilverFig.png" alt="Link 1"></a>
+                <a href="https://www.guesthouse56.com/"><img src="WeddingImages/Logo/Guesthouse@56.png" alt="Link 2"></a>
+                <a href="https://ambersandgrace.co.za/"><img src="WeddingImages/Logo/AmberGrace.png" alt="Link 3"></a>
+            </div>
         </div>
-        <div class="time-box">
-          <span id="minutes"></span><br> Minutes
+        <div class="image-container" id="image-13">
+            <img src="WeddingImages/12.png" alt="Image 13">
+            <!-- RSVP Button -->
+            <div class="rsvp-container">
+                <p>Are you coming to the wedding?</p>
+                <button id="rsvp-yes">Yes</button>
+                <button id="rsvp-no">No</button>
+            </div>
         </div>
-      </div>
     </div>
 
-    <!-- Images 5-12 -->
-    <img src="WeddingImages/5.png" alt="Image 5" class="image">
-    <img src="WeddingImages/6.png" alt="Image 6" class="image">
-    <img src="WeddingImages/7.png" alt="Image 7" class="image">
-    <img src="WeddingImages/8.png" alt="Image 8" class="image">
-    <img src="WeddingImages/9.png" alt="Image 9" class="image">
-    <img src="WeddingImages/10.png" alt="Image 10" class="image">
-    <img src="WeddingImages/Timeline.png" alt="Image 11" class="image">
-    <img src="WeddingImages/11.png" alt="Image 12" class="image">
-
-    <!-- Image 13 with RSVP -->
-    <div class="image image-with-rsvp">
-      <img src="WeddingImages/12.png" alt="Image 13" class="image">
-      <div class="rsvp">
-        <p>Are you coming to the wedding?</p>
-        <button id="yes">Yes</button>
-        <button id="no">No</button>
-      </div>
+    <!-- RSVP Form -->
+    <div id="rsvp-form" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-  </div>
 
-  <!-- RSVP Form (hidden initially) -->
-  <div id="rsvp-form" class="form-popup">
-    <form class="form-container">
-      <h2>RSVP Form</h2>
-      <label for="name"><b>Name</b></label>
-      <input type="text" placeholder="Enter your name" name="name" required>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter your email" name="email" required>
-      <button type="submit" class="btn">Submit</button>
-      <button type="button" class="btn cancel" id="cancel">Cancel</button>
-    </form>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+ 
