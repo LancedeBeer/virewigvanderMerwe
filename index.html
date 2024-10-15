@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Countdown</title>
+    <title>Responsive Wedding Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,17 +12,17 @@
         <img src="WeddingImages/1.png" alt="Image 1" class="image">
         <img src="WeddingImages/2.png" alt="Image 2" class="image">
         <img src="WeddingImages/3.png" alt="Image 3" class="image">
-
-        <!-- Image 4 with countdown timer -->
-        <div class="image countdown-container">
+        
+        <!-- Image 4 with Countdown Timer -->
+        <div class="image timer-container">
             <img src="WeddingImages/4.png" alt="Image 4" class="image">
             <div class="countdown">
-                <div id="days" class="countdown-item"></div>
-                <div id="hours" class="countdown-item"></div>
-                <div id="minutes" class="countdown-item"></div>
+                <div class="time-section" id="days">0<br>Days</div>
+                <div class="time-section" id="hours">0<br>Hours</div>
+                <div class="time-section" id="minutes">0<br>Minutes</div>
             </div>
         </div>
-
+        
         <!-- Images 5 to 12 -->
         <img src="WeddingImages/5.png" alt="Image 5" class="image">
         <img src="WeddingImages/6.png" alt="Image 6" class="image">
@@ -33,17 +33,21 @@
         <img src="WeddingImages/Timeline.png" alt="Image 11" class="image">
         <img src="WeddingImages/11.png" alt="Image 12" class="image">
 
-        <!-- Image 13 with RSVP button -->
+        <!-- Image 13 with RSVP -->
         <div class="image rsvp-container">
             <img src="WeddingImages/12.png" alt="Image 13" class="image">
             <div class="rsvp">
                 <p>Are you coming to the wedding?</p>
-                <button class="rsvp-btn" onclick="alert('Yes!')">Yes</button>
-                <button class="rsvp-btn" onclick="alert('No')">No</button>
+                <button id="yes">Yes</button>
+                <button id="no">No</button>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
+</body>
+</html>
+
+  <script src="script.js"></script>
 </body>
 </html>

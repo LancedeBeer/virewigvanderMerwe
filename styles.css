@@ -6,6 +6,7 @@
 
 body, html {
     height: 100%;
+    width: 100%;
     font-family: Arial, sans-serif;
 }
 
@@ -13,51 +14,69 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     width: 100%;
+    max-width: 100%;
 }
 
 .image {
     width: 100%;
     height: auto;
-    display: block;
 }
 
-.countdown-container, .rsvp-container {
+.timer-container, .rsvp-container {
     position: relative;
 }
 
 .countdown {
     position: absolute;
-    top: 20px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
-.countdown-item {
-    border: 2px solid black;
-    padding: 10px;
+.time-section {
+    display: inline-block;
     text-align: center;
-    background-color: white;
-    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .rsvp {
     position: absolute;
-    bottom: 20px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
+    font-size: 20px;
 }
 
-.rsvp-btn {
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 5px;
+.rsvp button {
     background: none;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.rsvp button:hover {
+    background: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .countdown {
+        flex-direction: column;
+    }
+
+    .rsvp {
+        flex-direction: column;
+    }
 }
