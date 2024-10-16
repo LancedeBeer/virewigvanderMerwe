@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-section {
+    position: relative;
+    width: 100%;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Countdown Timer Styles */
+.countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.time-box {
+    margin: 0 10px;
+    text-align: center;
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.time-box span:first-child {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Linked Images Styles */
+.linked-images {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.linked-images a {
+    margin: 0 10px;
+}
+
+.linked-images img {
+    width: 100px;
+    height: auto;
+    border: none;
+}
+
+/* RSVP Styles */
+.rsvp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.rsvp p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.rsvp button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 2px solid #000;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.rsvp button:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin: 10px 0 5px;
+}
+
+.modal-content input,
+.modal-content select {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.modal-content button {
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.modal-content button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .countdown {
+        flex-direction: column;
+    }
+
+    .linked-images {
+        flex-direction: column;
+    }
+
+    .linked-images a {
+        margin: 10px 0;
+    }
+
+    .linked-images img {
+        width: 80px;
+    }
+}

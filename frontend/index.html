@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image 1 -->
+        <div class="image-section" id="image1">
+            <img src="WeddingImages/1.png" alt="Image 1">
+        </div>
+        <!-- Image 2 -->
+        <div class="image-section" id="image2">
+            <img src="WeddingImages/2.png" alt="Image 2">
+        </div>
+        <!-- Image 3 -->
+        <div class="image-section" id="image3">
+            <img src="WeddingImages/3.png" alt="Image 3">
+        </div>
+        <!-- Image 4 with Countdown Timer -->
+        <div class="image-section" id="image4">
+            <img src="WeddingImages/4.png" alt="Image 4">
+            <div class="countdown" id="countdown">
+                <div class="time-box">
+                    <span id="days">0</span>
+                    <span>Days</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours">0</span>
+                    <span>Hours</span>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">0</span>
+                    <span>Minutes</span>
+                </div>
+            </div>
+        </div>
+        <!-- Images 5 to 11 -->
+        <div class="image-section" id="image5">
+            <img src="WeddingImages/5.png" alt="Image 5">
+        </div>
+        <div class="image-section" id="image6">
+            <img src="WeddingImages/6.png" alt="Image 6">
+        </div>
+        <div class="image-section" id="image7">
+            <img src="WeddingImages/7.png" alt="Image 7">
+        </div>
+        <div class="image-section" id="image8">
+            <img src="WeddingImages/8.png" alt="Image 8">
+        </div>
+        <div class="image-section" id="image9">
+            <img src="WeddingImages/9.png" alt="Image 9">
+        </div>
+        <div class="image-section" id="image10">
+            <img src="WeddingImages/10.png" alt="Image 10">
+        </div>
+        <div class="image-section" id="image11">
+            <img src="WeddingImages/Timeline.png" alt="Image 11">
+        </div>
+        <!-- ... Repeat for images 6 to 11 ... -->
+        <!-- Image 12 with 3 Linked Images -->
+        <div class="image-section" id="image12">
+            <img src="WeddingImages/11.png" alt="Image 12">
+            <div class="linked-images">
+                <a href="https://example.com/link1" target="_blank">
+                    <img src="images/link1.jpg" alt="Link 1">
+                </a>
+                <a href="https://example.com/link2" target="_blank">
+                    <img src="images/link2.jpg" alt="Link 2">
+                </a>
+                <a href="https://example.com/link3" target="_blank">
+                    <img src="images/link3.jpg" alt="Link 3">
+                </a>
+            </div>
+        </div>
+        <!-- Image 13 with RSVP -->
+        <div class="image-section" id="image13">
+            <img src="WeddingImages/12.png" alt="Image 13">
+            <div class="rsvp">
+                <p>Are you coming to the wedding?</p>
+                <button id="yesBtn">Yes</button>
+                <button id="noBtn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- No RSVP Modal -->
+    <div id="noModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeNoModal">&times;</span>
+            <h2>We're sorry you can't make it!</h2>
+            <form id="noForm">
+                <label for="noName">Your Name:</label>
+                <input type="text" id="noName" name="noName" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Yes RSVP Modal -->
+    <div id="yesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeYesModal">&times;</span>
+            <h2>We're excited to celebrate with you!</h2>
+            <form id="yesForm">
+                <label for="yesName">Your Name:</label>
+                <input type="text" id="yesName" name="yesName" required>
+
+                <label for="starter">Starter:</label>
+                <select id="starter" name="starter" required>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                </select>
+
+                <label for="main">Main:</label>
+                <select id="main" name="main" required>
+                    <option value="Option A">Option A</option>
+                    <option value="Option B">Option B</option>
+                </select>
+
+                <label for="dessert">Dessert:</label>
+                <select id="dessert" name="dessert" required>
+                    <option value="Dessert 1">Dessert 1</option>
+                    <option value="Dessert 2">Dessert 2</option>
+                    <option value="Dessert 3">Dessert 3</option>
+                    <option value="Dessert 4">Dessert 4</option>
+                </select>
+
+                <label for="song">Song Recommendation:</label>
+                <input type="text" id="song" name="song" placeholder="Song Title - Artist" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
