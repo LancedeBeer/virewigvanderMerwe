@@ -3,68 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Website</title>
+    <title>Wedding Invite</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Image 1 -->
-        <div class="image-section" id="image1">
-            <img src="WeddingImages/1.png" alt="Image 1">
-        </div>
-        <!-- Image 2 -->
-        <div class="image-section" id="image2">
-            <img src="WeddingImages/2.png" alt="Image 2">
-        </div>
-        <!-- Image 3 -->
-        <div class="image-section" id="image3">
-            <img src="WeddingImages/3.png" alt="Image 3">
-        </div>
-        <!-- Image 4 with Countdown Timer -->
-        <div class="image-section" id="image4">
+    <div class="flex-container">
+        <!-- 13 images -->
+        <div class="flex-item" id="image1"><img src="WeddingImages/1.png" alt="Image 1"></div>
+        <div class="flex-item" id="image2"><img src="WeddingImages/2.png" alt="Image 2"></div>
+        <div class="flex-item" id="image3"><img src="WeddingImages/3.png" alt="Image 3"></div>
+        <div class="flex-item" id="image4">
             <img src="WeddingImages/4.png" alt="Image 4">
-            <div class="countdown" id="countdown">
-                <div class="time-box">
-                    <span id="days">0</span>
-                    <span>Days</span>
-                </div>
-                <div class="time-box">
-                    <span id="hours">0</span>
-                    <span>Hours</span>
-                </div>
-                <div class="time-box">
-                    <span id="minutes">0</span>
-                    <span>Minutes</span>
-                </div>
-            </div>
+            <div class="countdown" id="countdown"></div>
         </div>
-        <!-- Images 5 to 11 -->
-        <div class="image-section" id="image5">
-            <img src="WeddingImages/5.png" alt="Image 5">
-        </div>
-        <div class="image-section" id="image6">
-            <img src="WeddingImages/6.png" alt="Image 6">
-        </div>
-        <div class="image-section" id="image7">
-            <img src="WeddingImages/7.png" alt="Image 7">
-        </div>
-        <div class="image-section" id="image8">
-            <img src="WeddingImages/8.png" alt="Image 8">
-        </div>
-        <div class="image-section" id="image9">
-            <img src="WeddingImages/9.png" alt="Image 9">
-        </div>
-        <div class="image-section" id="image10">
-            <img src="WeddingImages/10.png" alt="Image 10">
-        </div>
-        <div class="image-section" id="image11">
-            <img src="WeddingImages/Timeline.png" alt="Image 11">
-        </div>
-        <!-- ... Repeat for images 6 to 11 ... -->
-        <!-- Image 12 with 3 Linked Images -->
-        <div class="image-section" id="image12">
+        <div class="flex-item" id="image5"><img src="WeddingImages/5.png" alt="Image 5"></div>
+        <div class="flex-item" id="image6"><img src="WeddingImages/6.png" alt="Image 6"></div>
+        <div class="flex-item" id="image7"><img src="WeddingImages/7.png" alt="Image 7"></div>
+        <div class="flex-item" id="image8"><img src="WeddingImages/8.png" alt="Image 8"></div>
+        <div class="flex-item" id="image9"><img src="WeddingImages/9.png" alt="Image 9"></div>
+        <div class="flex-item" id="image10"><img src="WeddingImages/10.png" alt="Image 10"></div>
+        <div class="flex-item" id="image11"><img src="WeddingImages/Timeline.png" alt="Image 11"></div>
+        <div class="flex-item" id="image12">
             <img src="WeddingImages/11.png" alt="Image 12">
-            <div class="linked-images">
+            <div class="dynamic-links">
                 <a href="https://ambersandgrace.co.za/" target="_blank">
                     <img src="WeddingImages/Logo/AmberGrace.png" alt="Link 1">
                 </a>
@@ -76,18 +37,17 @@
                 </a>
             </div>
         </div>
-        <!-- Image 13 with RSVP -->
-        <div class="image-section" id="image13">
+        <div class="flex-item" id="image13">
             <img src="WeddingImages/12.png" alt="Image 13">
             <div class="rsvp">
                 <p>Are you coming to the wedding?</p>
-                <button id="yesBtn">Yes</button>
-                <button id="noBtn">No</button>
+                <button onclick="yesRSVP()">Yes</button>
+                <button onclick="noRSVP()">No</button>
             </div>
         </div>
     </div>
 
-    <!-- Modals -->
+<!-- Modals -->
     <!-- No RSVP Modal -->
     <div id="noModal" class="modal">
         <div class="modal-content">
