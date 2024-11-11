@@ -26,17 +26,18 @@
         <div class="flex-item" id="image12">
             <img src="WeddingImages/11.png" alt="Image 12">
             <div class="dynamic-links">
-                <a href="https://website1.com"><img src="WeddingImages/Logo/AmberGrace.png" alt="Link 1"></a>
-                <a href="https://website2.com"><img src="WeddingImages/Logo/Guesthouse@56.png" alt="Link 2"></a>
-                <a href="https://website3.com"><img src="WeddingImages/Logo/SilverFig.png" alt="Link 3"></a>
+                <a href="https://ambersandgrace.co.za/"><img src="WeddingImages/Logo/AmberGrace.png" alt="Link 1"></a>
+                <a href="https://www.guesthouse56.com/"><img src="WeddingImages/Logo/Guesthouse@56.png" alt="Link 2"></a>
+                <a href="https://www.silverfigguesthouse.co.za/"><img src="WeddingImages/Logo/SilverFig.png" alt="Link 3"></a>
             </div>
         </div>
         <div class="flex-item" id="image13">
             <img src="WeddingImages/12.png" alt="Image 13">
             <div class="rsvp">
                 <p>Are you coming to the wedding?</p>
-                <button onclick="noRSVP()">No</button>
                 <button onclick="yesRSVP()">Yes</button>
+                <button onclick="noRSVP()">No</button>
+                
             </div>
         </div>
     </div>
@@ -44,7 +45,7 @@
     <!-- Popup for RSVP forms -->
     <div class="popup" id="noPopup">
         <label for="name">Please enter your name:</label>
-        <input type="text" id="name" required>
+        <input type="text" id="name" required><br>
         <button onclick="closePopup('noPopup')">Submit</button>
     </div>
 
@@ -52,18 +53,21 @@
         <form id="rsvpForm">
             <label for="guestName">Name:</label>
             <input type="text" id="guestName" required>
+            <br>
 
             <label>Starter:</label>
             <select id="starter">
                 <option>Option 1</option>
                 <option>Option 2</option>
             </select>
+            <br>
 
             <label>Main:</label>
             <select id="main">
                 <option>Option 1</option>
                 <option>Option 2</option>
             </select>
+            <br>
 
             <label>Dessert:</label>
             <select id="dessert">
@@ -72,10 +76,12 @@
                 <option>Option 3</option>
                 <option>Option 4</option>
             </select>
+            <br>
 
             <label>Song Recommendation:</label>
             <input type="text" id="songRecommendation">
-
+            <br>
+            
             <button type="submit" onclick="closePopup('yesPopup')">Submit</button>
         </form>
     </div>
