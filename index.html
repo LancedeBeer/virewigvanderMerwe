@@ -26,76 +26,58 @@
         <div class="flex-item" id="image12">
             <img src="WeddingImages/11.png" alt="Image 12">
             <div class="dynamic-links">
-                <a href="https://ambersandgrace.co.za/" target="_blank">
-                    <img src="WeddingImages/Logo/AmberGrace.png" alt="Link 1">
-                </a>
-                <a href="https://www.guesthouse56.com/" target="_blank">
-                    <img src="WeddingImages/Logo/Guesthouse@56.png" alt="Link 2">
-                </a>
-                <a href="https://www.silverfigguesthouse.co.za/" target="_blank">
-                    <img src="WeddingImages/Logo/SilverFig.png" alt="Link 3">
-                </a>
+                <a href="https://website1.com"><img src="WeddingImages/Logo/AmberGrace.png" alt="Link 1"></a>
+                <a href="https://website2.com"><img src="WeddingImages/Logo/Guesthouse@56.png" alt="Link 2"></a>
+                <a href="https://website3.com"><img src="WeddingImages/Logo/SilverFig.png" alt="Link 3"></a>
             </div>
         </div>
         <div class="flex-item" id="image13">
             <img src="WeddingImages/12.png" alt="Image 13">
             <div class="rsvp">
                 <p>Are you coming to the wedding?</p>
-                <button onclick="yesRSVP()">Yes</button>
                 <button onclick="noRSVP()">No</button>
+                <button onclick="yesRSVP()">Yes</button>
             </div>
         </div>
     </div>
 
-<!-- Modals -->
-    <!-- No RSVP Modal -->
-    <div id="noModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeNoModal">&times;</span>
-            <h2>We're sorry you can't make it!</h2>
-            <form id="noForm">
-                <label for="noName">Your Name:</label>
-                <input type="text" id="noName" name="noName" required>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+    <!-- Popup for RSVP forms -->
+    <div class="popup" id="noPopup">
+        <label for="name">Please enter your name:</label>
+        <input type="text" id="name" required>
+        <button onclick="closePopup('noPopup')">Submit</button>
     </div>
 
-    <!-- Yes RSVP Modal -->
-    <div id="yesModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeYesModal">&times;</span>
-            <h2>We're excited to celebrate with you!</h2>
-            <form id="yesForm">
-                <label for="yesName">Your Name:</label>
-                <input type="text" id="yesName" name="yesName" required>
+    <div class="popup" id="yesPopup">
+        <form id="rsvpForm">
+            <label for="guestName">Name:</label>
+            <input type="text" id="guestName" required>
 
-                <label for="starter">Starter:</label>
-                <select id="starter" name="starter" required>
-                    <option value="Option 1">1. Biltong and smoked gouda pasta salad</option>
-                    <option value="Option 2">2. Panko crusted prawns with asian slaw and homemade pineapple and chili relish</option>
-                </select>
+            <label>Starter:</label>
+            <select id="starter">
+                <option>Option 1</option>
+                <option>Option 2</option>
+            </select>
 
-                <label for="main">Main:</label>
-                <select id="main" name="main" required>
-                    <option value="Option A">1. Garlic and red wine braised lamb shank on rosemary buttered mashed potatoes drizzled with homemade apple-mint jelly</option>
-                    <option value="Option B">2. Apricot glazed chicken served with a Cape Malay infused rice</option>
-                </select>
+            <label>Main:</label>
+            <select id="main">
+                <option>Option 1</option>
+                <option>Option 2</option>
+            </select>
 
-                <label for="dessert">Dessert:</label>
-                <select id="dessert" name="dessert" required>
-                    <option value="Dessert 1">1. Granadilla cheesecake</option>
-                    <option value="Dessert 2">2. Traditional peppermint crisp tart</option>
-                    <option value="Dessert 3">3. Classic vanilla crème brûlée</option>
-                    <option value="Dessert 4">4. Lemon meringue crumble</option>
-                </select>
+            <label>Dessert:</label>
+            <select id="dessert">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+            </select>
 
-                <label for="song">Song Recommendation:</label>
-                <input type="text" id="song" name="song" placeholder="Song Title - Artist" required>
+            <label>Song Recommendation:</label>
+            <input type="text" id="songRecommendation">
 
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+            <button type="submit" onclick="closePopup('yesPopup')">Submit</button>
+        </form>
     </div>
 
     <script src="script.js"></script>
