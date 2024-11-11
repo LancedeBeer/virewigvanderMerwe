@@ -1,75 +1,52 @@
-* {
+body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
-body, html {
-    height: 100%;
-    width: 100%;
-    font-family: Arial, sans-serif;
-}
-
-.container {
+.flex-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100vh;
 }
 
-.image-section {
+.flex-item {
+    flex: 1;
     position: relative;
-    width: 100%;
 }
 
-.image-section img {
+.flex-item img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Countdown Timer Styles */
 .countdown {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-   
-    padding: 0px;
-    border-radius: 5px;
-}
-
-.time-box {
-    margin: 0 10px;
+    border: 1px solid #000;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    border: 1.5px solid #000;
-    padding: 02px;
-    border-radius: 8px;
 }
 
-.time-box span:first-child {
-    display: block;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-/* Linked Images Styles */
-.linked-images {
+.dynamic-links {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: row;
+    gap: 10px;
 }
 
-.linked-images a {
-    margin: 0 10px;
-}
-
-.linked-images img {
-    width: 100px;
-    height: auto;
-    border: none;
+.dynamic-links img {
+    width: 50px;
+    height: 50px;
 }
 
 /* RSVP Styles */
@@ -164,23 +141,4 @@ body, html {
 
 .modal-content button:hover {
     background-color: #218838;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .countdown {
-        flex-direction: column;
-    }
-
-    .linked-images {
-        flex-direction: column;
-    }
-
-    .linked-images a {
-        margin: 10px 0;
-    }
-
-    .linked-images img {
-        width: 80px;
-    }
 }
