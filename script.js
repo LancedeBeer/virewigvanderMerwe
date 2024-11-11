@@ -1,26 +1,19 @@
-// Countdown Timer
-function countdownTimer() {
-    const targetDate = new Date('April 26, 2025 00:00:00').getTime();
+// Countdown timer
+const countdownDate = new Date("April 26, 2025 00:00:00").getTime();
 
-    const countdown = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
 
-        if (distance < 0) {
-            clearInterval(countdown);
-            document.getElementById('countdown').innerHTML = "It's the day!";
-            return;
-        }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-        document.getElementById('days').innerText = days;
-        document.getElementById('hours').innerText = hours;
-        document.getElementById('minutes').innerText = minutes;
-    }, 1000);
+    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m`;
 }
+
+setInterval(updateCountdown, 60000);
+updateCountdown();
 
 // Modal Functionality
 document.addEventListener('DOMContentLoaded', () => {
