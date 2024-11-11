@@ -15,75 +15,20 @@ function updateCountdown() {
 setInterval(updateCountdown, 60000);
 updateCountdown();
 
-// Modal Functionality
-document.addEventListener('DOMContentLoaded', () => {
-    countdownTimer();
+// RSVP popups
+function noRSVP() {
+    document.getElementById("noPopup").style.display = "block";
+}
 
-    const yesBtn = document.getElementById('yesBtn');
-    const noBtn = document.getElementById('noBtn');
-    const noModal = document.getElementById('noModal');
-    const yesModal = document.getElementById('yesModal');
-    const closeNoModal = document.getElementById('closeNoModal');
-    const closeYesModal = document.getElementById('closeYesModal');
+function yesRSVP() {
+    document.getElementById("yesPopup").style.display = "block";
+}
 
-    yesBtn.onclick = () => { yesModal.style.display = 'block'; }
-    noBtn.onclick = () => { noModal.style.display = 'block'; }
-
-    closeNoModal.onclick = () => { noModal.style.display = 'none'; }
-    closeYesModal.onclick = () => { yesModal.style.display = 'none'; }
-
-    window.onclick = (event) => {
-        if (event.target == noModal) {
-            noModal.style.display = 'none';
-        }
-        if (event.target == yesModal) {
-            yesModal.style.display = 'none';
-        }
+function closePopup(id) {
+    document.getElementById(id).style.display = "none";
+    if (id === "noPopup") {
+        document.getElementById("image1").scrollIntoView({ behavior: "smooth" });
     }
+}
 
-    //Handle No RSVP Form
-    const noForm = document.getElementById('noForm');
-    noForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const name = document.getElementById('noName').value;
-
-        // Send data to backend
-        try {
-            await fetch('https://your-backend-url.com/api/rsvp/no', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name })
-            });
-            alert('Thank you!');
-            window.location.href = '#image1';
-        } catch (error) {
-            console.error('Error:', error);
-            alert('There was an error submitting your response.');
-        }
-    });
-
-    // Handle Yes RSVP Form
-    const yesForm = document.getElementById('yesForm');
-    yesForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const name = document.getElementById('yesName').value;
-        const starter = document.getElementById('starter').value;
-        const main = document.getElementById('main').value;
-        const dessert = document.getElementById('dessert').value;
-        const song = document.getElementById('song').value;
-
-        // Send data to backend
-        try {
-            await fetch('https://your-backend-url.com/api/rsvp/yes', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, starter, main, dessert, song })
-            });
-            alert('Thank you for your response!');
-            yesModal.style.display = 'none';
-        } catch (error) {
-            console.error('Error:', error);
-            alert('There was an error submitting your response.');
-        }
-    });
-}); 
+// Optional: add form submission handling for RSVP here
