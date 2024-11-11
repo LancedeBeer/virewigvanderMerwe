@@ -9,7 +9,7 @@ function updateCountdown() {
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-    document.getElementById("countdown").innerHTML = `${days}days ${hours}hours ${minutes}mins`;
+    document.getElementById("countdown").innerHTML = `${days}Days ${hours}Hours ${minutes}Mins`;
 }
 
 setInterval(updateCountdown, 60000);
