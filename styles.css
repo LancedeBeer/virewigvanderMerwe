@@ -68,6 +68,13 @@ body, html {
     padding: 20px;
     border: 1px solid #ccc;
     z-index: 1000;
+    width: 280px;
+}
+
+#starter
+#main
+#dessert {
+    max-width: 240px;
 }
 
 button {
