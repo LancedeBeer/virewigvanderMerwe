@@ -4,6 +4,7 @@ body, html {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    color: #808078;
 }
 
 .flex-container {
@@ -29,7 +30,8 @@ body, html {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid #000;
+    border: 2px solid #808078;
+    border-radius: 12px;
     padding: 10px;
     font-size: 1rem;
     text-align: center;
@@ -51,7 +53,7 @@ body, html {
 
 .rsvp {
     position: absolute;
-    top: 50%;
+    top: 56%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -69,14 +71,15 @@ body, html {
     border: 1px solid #ccc;
     z-index: 1000;
     width: 280px;
+    
 }
 
-#starter
-#main
-#dessert {
-    max-width: 240px;
-}
 
 button {
-    margin: 5px;
+    margin: 12px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 1.2rem;
+    background-color: #c2c7c8;
 }

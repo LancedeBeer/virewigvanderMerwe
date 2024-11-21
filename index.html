@@ -35,7 +35,7 @@
         <div class="flex-item" id="image13">
             <img src="WeddingImages/12.png" alt="Image 13">
             <div class="rsvp">
-                <p>Are you coming to the wedding?</p>
+                <h4>Are you coming to the wedding?</h4>
                 <button onclick="yesRSVP()">Yes</button>
                 <button onclick="noRSVP()">No</button>
                 
@@ -45,6 +45,7 @@
 
     <!-- Popup for RSVP forms -->
     <div class="popup" id="noPopup">
+        <h3>You will be missed at the celebration.</h3>
         <label for="name">Please enter your name:</label>
         <input type="text" id="name" required><br>
         <button onclick="closePopup('noPopup')">Submit</button>
@@ -52,11 +53,22 @@
 
     <div class="popup" id="yesPopup">
         <form id="rsvpForm">
-            <label for="guestName">Name:</label>
+            <h3>Please fill in.</h3>
+            <label for="guestName">Name:</label><br>
             <input type="text" id="guestName" required>
             <br>
+            
+            <label>Song Recommendation:</label>
+            <input type="text" id="songRecommendation">
+            <br>
 
-            <label>Starter:</label>
+            <label>Song Artist:</label><br>
+            <input type="text" id="songArtist">
+            <br>
+
+            <button type="submit" onclick="closePopup('yesPopup')">Submit</button>
+
+            <!-- <label>Starter:</label>
             <select id="starter">
                 <option>Biltong and smoked gouda pasta salad</option>
                 <option>Panko crusted prawns with asian slaw and homemade pineapple and chili relish</option>
@@ -77,13 +89,9 @@
                 <option>Classic vanilla crème brûlée</option>
                 <option>Lemon meringue crumble</option>
             </select>
-            <br>
+            <br>-->
 
-            <label>Song Recommendation:</label>
-            <input type="text" id="songRecommendation">
-            <br>
-
-            <button type="submit" onclick="closePopup('yesPopup')">Submit</button>
+            
         </form>
     </div>
 
