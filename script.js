@@ -31,4 +31,39 @@ function closePopup(id) {
     }
 }
 
-// Optional: add form submission handling for RSVP here
+// Form submition for noRSVP
+function submitNoRSVP() {
+    const name = document.getElementById("name").value;
+  
+    fetch("http://localhost:5000/api/rsvp/no", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.message);
+        closePopup("noPopup");
+    })
+    .catch((error) => console.error("Error:", error));
+}
+  
+// Form submit for yesRSVP
+function submitYesRSVP() {
+    const name = document.getElementById("guestName").value;
+    const songRecommendation = document.getElementById("songRecommendation").value;
+    const songArtist = document.getElementById("songArtist").value;
+  
+    fetch("http://localhost:5000/api/rsvp/yes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, songRecommendation, songArtist }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.message);
+        closePopup("yesPopup");
+    })
+    .catch((error) => console.error("Error:", error));
+}
+  
